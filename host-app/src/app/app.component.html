@@ -44,9 +44,13 @@
                       <span>Modal</span>
                     </a>
                   </li>
+                  <li class="dds__side-nav__item">
+                    <a href="javascript:void(0)" (click)="changeComponent('Revision')">
+                      <span>Revision</span>
+                    </a>
+                  </li>
                 </ul>
               </li>
-
             </ul>
           </li>
 
@@ -88,4 +92,73 @@
       </div>
     </div>
   </div>
+  <div *ngIf="selectedComponent === 'Revision'">
+    <div #tableElementPagination class="dds__table" role="table" id="table-625314204"></div>
+
+<div
+  class="dds__pagination"
+  data-dds="pagination"
+  id="table-625314204-pagination"
+  role="navigation"
+  aria-label="pagination-table-625314204-pagination"
+  #paginationElement
+>
+  <div class="dds__pagination__summary">
+    <label class="dds__pagination__per-page-label" for="pagination-per-page-table-625314204-pagination">Items per page</label>
+    <div class="dds__select dds__select--sm dds__pagination__per-page-select" data-dds="select">
+      <div class="dds__select__wrapper">
+        <select class="dds__select__field" id="pagination-per-page-table-625314204-pagination">
+          <option value="6">6</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+    </div>
+    <div class="dds__pagination__range" aria-live="polite">
+      <span class="dds__pagination__range-start"></span>
+      –
+      <span class="dds__pagination__range-end"></span>
+      <span class="dds__pagination__range-total-label">
+        of
+        <span class="dds__pagination__range-total"></span>
+        items
+      </span>
+    </div>
+  </div>
+  <div class="dds__pagination__nav">
+    <button
+      type="button"
+      class="dds__button dds__button--tertiary dds__button--sm dds__button__icon dds__pagination__first-page"
+      aria-label="First page"
+    ></button>
+    <button type="button" class="dds__button dds__button--tertiary dds__button--sm dds__pagination__prev-page" aria-label="Previous page">
+      <span class="dds__pagination__prev-page-label">Previous</span>
+    </button>
+    <div class="dds__pagination__page-range">
+      <label class="dds__pagination__page-range-label" for="pagination-current-page-table-625314204-pagination">Page</label>
+      <div class="dds__input-text__container dds__input-text__container--sm">
+        <div class="dds__input-text__wrapper dds__pagination__page-range-current-wrapper">
+          <input
+            class="dds__input-text dds__pagination__page-range-current"
+            type="text"
+            id="pagination-current-page-table-625314204-pagination"
+          />
+        </div>
+      </div>
+      <div class="dds__pagination__page-range-total-label">
+        of
+        <span class="dds__pagination__page-range-total"></span>
+      </div>
+    </div>
+    <button type="button" class="dds__button dds__button--tertiary dds__button--sm dds__pagination__next-page" aria-label="Next page">
+      <span class="dds__pagination__next-page-label">Next</span>
+    </button>
+    <button
+      type="button"
+      class="dds__button dds__button--tertiary dds__button--sm dds__button__icon dds__pagination__last-page"
+      aria-label="Last page"
+    ></button>
+  </div>
+</div>
+</div>
 </div>
