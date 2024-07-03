@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { ColDef, DomLayoutType, GridApi, GridReadyEvent } from 'ag-grid-community';
 import { ITableData } from './table.interface';
 import { HttpClient } from '@angular/common/http';

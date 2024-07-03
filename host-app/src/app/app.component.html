@@ -1,51 +1,81 @@
-<div style="display: flex;">
+<div style="display: flex">
   <div>
-    <nav class="dds__side-nav__wrapper" data-dds="side-nav" id="sidenav-740523883" aria-label="Side Navigation example">
+    <nav
+      class="dds__side-nav__wrapper"
+      data-dds="side-nav"
+      id="sidenav-740523883"
+      aria-label="Side Navigation example"
+    >
       <section class="dds__side-nav">
         <ul class="dds__side-nav__menu">
           <li class="dds__side-nav__item" (click)="changeComponent('')">
             <a href="javascript:void(0)">
-              <span class="dds__icon dds__side-nav__icon dds__icon--home" aria-hidden="true"></span>
+              <span
+                class="dds__icon dds__side-nav__icon dds__icon--home"
+                aria-hidden="true"
+              ></span>
               <span>Home</span>
             </a>
           </li>
 
           <li class="dds__side-nav__group">
             <button type="button" aria-haspopup="true" aria-expanded="false">
-              <span class="dds__icon dds__side-nav__icon dds__icon--toolbox" aria-hidden="true"></span>
+              <span
+                class="dds__icon dds__side-nav__icon dds__icon--toolbox"
+                aria-hidden="true"
+              ></span>
               <span>Getting Started</span>
             </button>
 
             <ul class="dds__side-nav__menu">
               <li class="dds__side-nav__group">
-                <button type="button" aria-haspopup="true" aria-expanded="false">
-                  <span class="dds__icon dds__side-nav__icon dds__icon--stack" aria-hidden="true"></span>
+                <button
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span
+                    class="dds__icon dds__side-nav__icon dds__icon--stack"
+                    aria-hidden="true"
+                  ></span>
                   <span>Components</span>
                 </button>
 
                 <ul class="dds__side-nav__menu">
-                  <li class="dds__side-nav__item" (click)="changeComponent('Tables')">
-                    <a href="javascript:void(0)">
+                  <li class="dds__side-nav__item">
+                    <a routerLink="/table-mfe" (click)="changeComponent('Table')">
                       <span>Tables</span>
                     </a>
                   </li>
-                  <li class="dds__side-nav__item" (click)="changeComponent('Date-Picker')">
+                  <li
+                    class="dds__side-nav__item"
+                    (click)="changeComponent('Date-Picker')"
+                  >
                     <a href="javascript:void(0)">
                       <span>Date Picker</span>
                     </a>
                   </li>
                   <li class="dds__side-nav__item">
-                    <a href="javascript:void(0)" (click)="changeComponent('Dropdown')">
+                    <a
+                      href="javascript:void(0)"
+                      (click)="changeComponent('Dropdown')"
+                    >
                       <span>Dropdown</span>
                     </a>
                   </li>
                   <li class="dds__side-nav__item">
-                    <a href="javascript:void(0)" (click)="changeComponent('Modal')">
+                    <a
+                      href="javascript:void(0)"
+                      (click)="changeComponent('Modal')"
+                    >
                       <span>Modal</span>
                     </a>
                   </li>
                   <li class="dds__side-nav__item">
-                    <a href="javascript:void(0)" (click)="changeComponent('Revision')">
+                    <a
+                      href="javascript:void(0)"
+                      (click)="changeComponent('Revision')"
+                    >
                       <span>Revision</span>
                     </a>
                   </li>
@@ -56,109 +86,183 @@
 
           <li class="dds__side-nav__item">
             <a href="javascript:void(0)">
-              <span class="dds__icon dds__side-nav__icon dds__icon--headset" aria-hidden="true"></span><span> Updates</span>
+              <span
+                class="dds__icon dds__side-nav__icon dds__icon--headset"
+                aria-hidden="true"
+              ></span
+              ><span> Updates</span>
             </a>
           </li>
         </ul>
       </section>
-    
+
       <div class="dds__side-nav__toggle">
         <button type="button" aria-label="collapse side navigation">
-          <span class="dds__icon dds__side-nav__icon dds__icon--chevron-left"></span>
+          <span
+            class="dds__icon dds__side-nav__icon dds__icon--chevron-left"
+          ></span>
         </button>
         <button type="button" aria-label="expand side navigation">
-          <span class="dds__icon dds__side-nav__icon dds__icon--chevron-right"></span>
+          <span
+            class="dds__icon dds__side-nav__icon dds__icon--chevron-right"
+          ></span>
         </button>
       </div>
     </nav>
   </div>
-  <div style="padding: 30px;" *ngIf="selectedComponent === 'Modal'">
-    <button class="dds__button" id="example" type="button" (click)="openModal()">Launch Modal Button</button>
-    <div #ddsdemomodal role="dialog" data-dds="modal" class="dds__modal" data-trigger="#example" aria-labelledby="modal-headline-596940454">
+  <div style="padding: 30px" *ngIf="selectedComponent === 'Modal'">
+    <button
+      class="dds__button"
+      id="example"
+      type="button"
+      (click)="openModal()"
+    >
+      Launch Modal Button
+    </button>
+    <div
+      #ddsdemomodal
+      role="dialog"
+      data-dds="modal"
+      class="dds__modal"
+      data-trigger="#example"
+      aria-labelledby="modal-headline-596940454"
+    >
       <div class="dds__modal__content">
-        <div class="dds__modal__header"><h3 class="dds__modal__title" id="modal-headline-596940454">Present new laptop</h3></div>
+        <div class="dds__modal__header">
+          <h3 class="dds__modal__title" id="modal-headline-596940454">
+            Present new laptop
+          </h3>
+        </div>
         <div id="modal-body-278176857" class="dds__modal__body">
           <p>
-            Small, light, and stylish laptops and 2-in-1s designed for ultimate productivity. A new era of collaboration and connectivity to
-            work anywhere. XPS laptops and 2-in-1s are precision crafted with premium materials, featuring stunning displays and the performance
-            you demand to express your creative self and your big ideas.
+            Small, light, and stylish laptops and 2-in-1s designed for ultimate
+            productivity. A new era of collaboration and connectivity to work
+            anywhere. XPS laptops and 2-in-1s are precision crafted with premium
+            materials, featuring stunning displays and the performance you
+            demand to express your creative self and your big ideas.
             <a href="https://www.dell.com">dell.com</a>
           </p>
         </div>
         <div class="dds__modal__footer">
-          <button class="dds__button dds__button--secondary dds__button--md" type="button" name="modal-primary-button">No</button>
-          <button class="dds__button dds__button--md" type="button" name="modal-secondary-button">Yes</button>
+          <button
+            class="dds__button dds__button--secondary dds__button--md"
+            type="button"
+            name="modal-primary-button"
+          >
+            No
+          </button>
+          <button
+            class="dds__button dds__button--md"
+            type="button"
+            name="modal-secondary-button"
+          >
+            Yes
+          </button>
         </div>
       </div>
     </div>
   </div>
   <div *ngIf="selectedComponent === 'Revision'">
-    <div #tableElementPagination class="dds__table" role="table" id="table-625314204"></div>
+    <div
+      #tableElementPagination
+      class="dds__table"
+      role="table"
+      id="table-625314204"
+    ></div>
 
-<div
-  class="dds__pagination"
-  data-dds="pagination"
-  id="table-625314204-pagination"
-  role="navigation"
-  aria-label="pagination-table-625314204-pagination"
-  #paginationElement
->
-  <div class="dds__pagination__summary">
-    <label class="dds__pagination__per-page-label" for="pagination-per-page-table-625314204-pagination">Items per page</label>
-    <div class="dds__select dds__select--sm dds__pagination__per-page-select" data-dds="select">
-      <div class="dds__select__wrapper">
-        <select class="dds__select__field" id="pagination-per-page-table-625314204-pagination">
-          <option value="6">6</option>
-          <option value="8">8</option>
-          <option value="10">10</option>
-        </select>
-      </div>
-    </div>
-    <div class="dds__pagination__range" aria-live="polite">
-      <span class="dds__pagination__range-start"></span>
-      –
-      <span class="dds__pagination__range-end"></span>
-      <span class="dds__pagination__range-total-label">
-        of
-        <span class="dds__pagination__range-total"></span>
-        items
-      </span>
-    </div>
-  </div>
-  <div class="dds__pagination__nav">
-    <button
-      type="button"
-      class="dds__button dds__button--tertiary dds__button--sm dds__button__icon dds__pagination__first-page"
-      aria-label="First page"
-    ></button>
-    <button type="button" class="dds__button dds__button--tertiary dds__button--sm dds__pagination__prev-page" aria-label="Previous page">
-      <span class="dds__pagination__prev-page-label">Previous</span>
-    </button>
-    <div class="dds__pagination__page-range">
-      <label class="dds__pagination__page-range-label" for="pagination-current-page-table-625314204-pagination">Page</label>
-      <div class="dds__input-text__container dds__input-text__container--sm">
-        <div class="dds__input-text__wrapper dds__pagination__page-range-current-wrapper">
-          <input
-            class="dds__input-text dds__pagination__page-range-current"
-            type="text"
-            id="pagination-current-page-table-625314204-pagination"
-          />
+    <div
+      class="dds__pagination"
+      data-dds="pagination"
+      id="table-625314204-pagination"
+      role="navigation"
+      aria-label="pagination-table-625314204-pagination"
+      #paginationElement
+    >
+      <div class="dds__pagination__summary">
+        <label
+          class="dds__pagination__per-page-label"
+          for="pagination-per-page-table-625314204-pagination"
+          >Items per page</label
+        >
+        <div
+          class="dds__select dds__select--sm dds__pagination__per-page-select"
+          data-dds="select"
+        >
+          <div class="dds__select__wrapper">
+            <select
+              class="dds__select__field"
+              id="pagination-per-page-table-625314204-pagination"
+            >
+              <option value="6">6</option>
+              <option value="8">8</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+        </div>
+        <div class="dds__pagination__range" aria-live="polite">
+          <span class="dds__pagination__range-start"></span>
+          –
+          <span class="dds__pagination__range-end"></span>
+          <span class="dds__pagination__range-total-label">
+            of
+            <span class="dds__pagination__range-total"></span>
+            items
+          </span>
         </div>
       </div>
-      <div class="dds__pagination__page-range-total-label">
-        of
-        <span class="dds__pagination__page-range-total"></span>
+      <div class="dds__pagination__nav">
+        <button
+          type="button"
+          class="dds__button dds__button--tertiary dds__button--sm dds__button__icon dds__pagination__first-page"
+          aria-label="First page"
+        ></button>
+        <button
+          type="button"
+          class="dds__button dds__button--tertiary dds__button--sm dds__pagination__prev-page"
+          aria-label="Previous page"
+        >
+          <span class="dds__pagination__prev-page-label">Previous</span>
+        </button>
+        <div class="dds__pagination__page-range">
+          <label
+            class="dds__pagination__page-range-label"
+            for="pagination-current-page-table-625314204-pagination"
+            >Page</label
+          >
+          <div
+            class="dds__input-text__container dds__input-text__container--sm"
+          >
+            <div
+              class="dds__input-text__wrapper dds__pagination__page-range-current-wrapper"
+            >
+              <input
+                class="dds__input-text dds__pagination__page-range-current"
+                type="text"
+                id="pagination-current-page-table-625314204-pagination"
+              />
+            </div>
+          </div>
+          <div class="dds__pagination__page-range-total-label">
+            of
+            <span class="dds__pagination__page-range-total"></span>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="dds__button dds__button--tertiary dds__button--sm dds__pagination__next-page"
+          aria-label="Next page"
+        >
+          <span class="dds__pagination__next-page-label">Next</span>
+        </button>
+        <button
+          type="button"
+          class="dds__button dds__button--tertiary dds__button--sm dds__button__icon dds__pagination__last-page"
+          aria-label="Last page"
+        ></button>
       </div>
     </div>
-    <button type="button" class="dds__button dds__button--tertiary dds__button--sm dds__pagination__next-page" aria-label="Next page">
-      <span class="dds__pagination__next-page-label">Next</span>
-    </button>
-    <button
-      type="button"
-      class="dds__button dds__button--tertiary dds__button--sm dds__button__icon dds__pagination__last-page"
-      aria-label="Last page"
-    ></button>
   </div>
-</div>
-</div>
+  <div *ngIf="selectedComponent === 'Table'">
+    <router-outlet></router-outlet>
+  </div>
 </div>

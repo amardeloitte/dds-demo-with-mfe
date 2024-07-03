@@ -46,6 +46,9 @@ module.exports = {
           "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
           "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
           "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+          "ag-grid-angular": { singleton: true, strictVersion: false, requiredVersion: 'auto' },
+          "ag-grid-community": { singleton: true, strictVersion: false, requiredVersion: 'auto' },
+          "ag-grid-enterprise": { singleton: true, strictVersion: false, requiredVersion: 'auto' },
 
           ...sharedMappings.getDescriptors()
         })

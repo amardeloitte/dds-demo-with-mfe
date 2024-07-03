@@ -1,9 +1,10 @@
-<ag-grid-angular
+<div style="height: 100%; width: 100vw;">
+   <ag-grid-angular
    [rowData]="rowData"
    [columnDefs]="columnDefs"
    class="ag-theme-quartz"
    [domLayout]="domLayout"
    [rowSelection]="rowSelection"
-   [sideBar]="true"
    [defaultColDef]="defaultColDef"
    (gridReady)="onGridReady($event)" />
+</div>
