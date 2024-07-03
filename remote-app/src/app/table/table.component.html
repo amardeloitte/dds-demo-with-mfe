@@ -1,5 +1,9 @@
 <ag-grid-angular
    [rowData]="rowData"
-   [columnDefs]="colDefs"
+   [columnDefs]="columnDefs"
    class="ag-theme-quartz"
-   style="height: 500px;" />
+   [domLayout]="domLayout"
+   [rowSelection]="rowSelection"
+   [sideBar]="true"
+   [defaultColDef]="defaultColDef"
+   (gridReady)="onGridReady($event)" />

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { ColDef } from 'ag-grid-community';
+import { ColDef, DomLayoutType, GridApi, GridReadyEvent } from 'ag-grid-community';
+import { ITableData } from './table.interface';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-table',
@@ -8,17 +10,35 @@ import { ColDef } from 'ag-grid-community';
 })
 export class TableComponent {
 
-  rowData = [
-    { make: "Tesla", model: "Model Y", price: 64950, electric: true },
-    { make: "Ford", model: "F-Series", price: 33850, electric: false },
-    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
-  ];
+  private gridApi!: GridApi<ITableData>;
+  public rowData!: ITableData[];
 
-  colDefs: ColDef[] = [
-    { field: "make" },
-    { field: "model" },
-    { field: "price" },
-    { field: "electric" }
-  ];
+  constructor(private http: HttpClient) {}
+
+  public columnDefs: ColDef[] = columnDefs;
+  public domLayout: DomLayoutType = "autoHeight";
+  public rowSelection: "single" | "multiple" = "multiple";
+  public defaultColDef: ColDef = {
+    editable: true,
+    filter: true,
+  };
+
+  onGridReady(params: GridReadyEvent<ITableData>) {
+    this.gridApi = params.api;
+
+    this.http
+      .get<
+        ITableData[]
+      >("https://jsonplaceholder.typicode.com/users")
+      .subscribe((data) => (this.rowData = data));
+  }
 
 }
+
+const columnDefs: ColDef[] = [
+  { field: "name", headerName: "Full Name", checkboxSelection: true, headerCheckboxSelection: true, },
+  { field: "username" },
+  { field: "email" },
+  { field: "phone" },
+  { field: "website" }
+];

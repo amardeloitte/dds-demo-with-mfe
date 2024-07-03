@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TableRoutingModule } from './table-routing.module';
 import { TableComponent } from './table.component';
 import { AgGridAngular } from 'ag-grid-angular';
-
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import { AgGridAngular } from 'ag-grid-angular';
   imports: [
     CommonModule,
     TableRoutingModule,
-    AgGridAngular
+    AgGridAngular,
+    HttpClientModule
   ]
 })
 export class TableModule { }
