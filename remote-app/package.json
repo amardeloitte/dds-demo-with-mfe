@@ -23,6 +23,7 @@
     "ag-grid-angular": "^32.0.0",
     "ag-grid-community": "^32.0.0",
     "ag-grid-enterprise": "^32.0.0",
+    "data-m-bus": "C:\\Projects\\mfe-demo-ng-16\\lib-app\\dist\\data-m-bus",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
