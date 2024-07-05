@@ -1,4 +1,5 @@
 <div style="height: 100vh; width: 100vw;">
+   <button class="dds__button" type="button" (click)="setDataForTechRemote()">Remote Table Button</button>
    <ag-grid-angular
    [rowData]="rowData"
    [columnDefs]="columnDefs"
@@ -6,5 +7,6 @@
    style="height: 100%;"
    [rowSelection]="'multiple'"
    [defaultColDef]="defaultColDef"
-   (gridReady)="onGridReady($event)" />
+   (gridReady)="onGridReady($event)"
+   (selectionChanged)="onSelectChange($event)" />
 </div>
